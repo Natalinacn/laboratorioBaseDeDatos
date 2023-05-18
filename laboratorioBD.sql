@@ -76,6 +76,8 @@ SELECT nombre FROM usuarios WHERE nombre <> 'Juan' AND nombre <> 'Maria' AND nom
 
 SELECT apellido FROM usuarios WHERE apellido = 'Montenegro' OR apellido = 'Caliguri';
 
+SELECT id, apellido, celular FROM usuarios WHERE id < 5;
+
 -- ------------------------------------------
 
 -- UPDATE
@@ -84,3 +86,12 @@ UPDATE usuarios SET correo = 'laura.vargas@example.com' WHERE id = 9;
 UPDATE usuarios SET id = 11 WHERE clave = 'carita987';
 SELECT * FROM usuarios;
 -- ------------------------------------------
+
+-- DELETE
+
+DELETE FROM usuarios WHERE correo = 'laura.vargas@example.com';
+DELETE FROM usuarios WHERE id = 2;
+DROP TABLE IF EXISTS usuarios;
+
+-- ------------------------------------------
+
