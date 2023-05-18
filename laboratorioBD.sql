@@ -59,3 +59,21 @@ VALUES(10, 'Nicolás', 'Montenegro', 'carita987');
 INSERT INTO usuarios(id, nombre, apellido, correo, clave)
 VALUES(12, 'Andrea', 'Caliguri', 'andrea.cali@example.com', 'andrea752');
 
+-- ------------------------------------------
+-- READ
+SELECT * FROM usuarios;
+
+SELECT nombre, apellido FROM usuarios;
+
+SELECT COUNT(id) FROM usuarios;
+
+SELECT nombre, apellido, id FROM usuarios WHERE id BETWEEN 5 AND 7;
+
+SELECT id, correo FROM usuarios WHERE correo = 'alejandro.lopez@example.com';
+
+SELECT nombre FROM usuarios WHERE nombre <> 'Juan' AND nombre <> 'Maria' AND nombre <> 'Alejandro';
+
+SELECT apellido FROM usuarios WHERE apellido = 'Montenegro' OR apellido = 'Caliguri';
+
+-- ------------------------------------------
+
