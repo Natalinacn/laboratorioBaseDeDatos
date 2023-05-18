@@ -51,7 +51,8 @@ VALUES(9, 'Laura', 'Vargas', '+52 555-9999', 'laura.vargas@example.com', 'laura5
 INSERT INTO usuarios 
 VALUES(10, 'José', 'Morales', '+52 555-0000', 'jose.morales@example.com', 'jose987');
 
--- AGREGAR SOLO CON ALGUNOS VALORES
+
+-- AGREGANDO USUARIOS ESPECIFICANDO SOLO CON ALGUNOS VALORES
 
 INSERT INTO usuarios(id, nombre, apellido, clave)
 VALUES(10, 'Nicolás', 'Montenegro', 'carita987');
@@ -77,3 +78,9 @@ SELECT apellido FROM usuarios WHERE apellido = 'Montenegro' OR apellido = 'Calig
 
 -- ------------------------------------------
 
+-- UPDATE
+UPDATE usuarios SET celular = '+54 777-3636' WHERE id = 10;
+UPDATE usuarios SET correo = 'laura.vargas@example.com' WHERE id = 9;
+UPDATE usuarios SET id = 11 WHERE clave = 'carita987';
+SELECT * FROM usuarios;
+-- ------------------------------------------
